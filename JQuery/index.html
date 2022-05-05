@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>JQuery</title>
+        
+        <!--- My css ---->
+        
+<link href="main.css" rel="stylesheet">
+        
+        <!--- Google Font ---->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+
+    
+
+
+    </head>    
+        
+<body>
+
+<h1>Introduction to JQuery</h1>
+
+<p id="whisper" style="color:floralwhite">JQuery is the most popular javascript libary in the world.</p>
+    
+<p>Enter Your Name.</p>
+<input id="usersName" />
+<button onclick="theGreeting()">OK</button>
+    <p id="myGreeting"></p>
+    
+
+
+
+
+    
+    <script type="text/javascript">
+        
+    function theGreeting() {
+    var friendName = document.getElementById("usersName").value;
+    const myDate = Date();
+            
+    document.getElementById("myGreeting").innerHTML = "Hello, " + friendName + "! Today is " + myDate;
+};
+        
+
+
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>  
+$(document).ready(function() {
+    $("#whisper").hover(function() {
+        $(this).css("color", "dimgrey");
+        
+    });
+});
+    
+    
+    $(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "floralwhite");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "pink");
+  });
+});
+    
+    
+</script>
+
+</body>
+</html>
